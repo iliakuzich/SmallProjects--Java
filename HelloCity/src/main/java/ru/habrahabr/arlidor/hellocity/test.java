@@ -3,19 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package test;
-
-import ru.habrahabr.arlidor.hellocity.DisplayMessage;
+package ru.habrahabr.arlidor.hellocity;
 
 /**
  *
  * @author Anton
  */
-public class HelloCity {
+public class test {
 
     public static void main(String[] args) {
-        DisplayMessage msg = new DisplayMessage();
-        msg.conversation();
+        Conversation cn = new Conversation();
+        cn.speaking();
     }
-
 }

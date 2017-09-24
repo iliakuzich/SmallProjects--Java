@@ -24,7 +24,7 @@ public class MessageResource {
     public MessageResource() {
         String language = null;
         String country = null;
-
+       
         if (Locale.getDefault().getDisplayLanguage().equals("русский")) {
             language = "RU";
             country = "RU";
@@ -47,16 +47,12 @@ public class MessageResource {
     public String viewString(String str) {
         String s = null;
         try {
-            String sv = getRb().getString(str);
+            String sv = rb.getString(str);
             s = new String(sv.getBytes("ISO-8859-1"), "UTF-8");
         } catch (UnsupportedEncodingException ex) {
             Logger.getLogger(MessageResource.class.getName()).log(Level.SEVERE, null, ex);
         }
         return s;
-    }
-
-    public ResourceBundle getRb() {
-        return rb;
     }
 
 }

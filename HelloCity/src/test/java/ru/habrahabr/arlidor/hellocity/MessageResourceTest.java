@@ -5,7 +5,7 @@
  */
 package ru.habrahabr.arlidor.hellocity;
 
-import java.util.ResourceBundle;
+import java.util.Locale;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,10 +16,6 @@ import static org.junit.Assert.*;
  * @author Anton
  */
 public class MessageResourceTest {
-    
-    public MessageResourceTest() {
-    }
-    
 
     /**
      * Test of viewString method, of class MessageResource.
@@ -27,13 +23,12 @@ public class MessageResourceTest {
     @Test
     public void testViewString() {
         System.out.println("viewString");
-        String str = "str1";
+        String str = "greeting1";
+        Locale.setDefault(Locale.ENGLISH);
         MessageResource instance = new MessageResource();
-        String expResult = "Здраствуйте, введите название города или идентификатор часового пояса/название города!";
+        String expResult = "Good Morning!";
         String result = instance.viewString(str);
         assertEquals(expResult, result);
-        
     }
-   
-    
+
 }

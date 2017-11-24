@@ -5,29 +5,30 @@
  */
 package ru.habrahabr.arlidor.hellocity;
 
-import java.time.ZonedDateTime;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.Ignore;
 
 /**
  *
  * @author Anton
  */
-public class TimeZoneTest {
+public class InDataHandlerTest {
 
     /**
-     * Test of searchTimeZone method, of class TimeZone.
+     * Test of preparation method, of class InDataHandler.
+     *
+     * @throws java.lang.Exception
      */
     @Test
-    public void testSearchTimeZone() {
-        System.out.println("searchTimeZone");
-        String msg = "Kiev";
-        TimeZoneHandler instance = new TimeZoneHandler();
-        boolean expResult = true;
-        boolean result = instance.searchTimeZone(msg);
+    public void testPreparation() throws Exception {
+        System.out.println("preparation");
+        String[] args = new String[]{"Europe/Kiev"};
+        InDataHandler instance = new InDataHandler();
+        String expResult = "Kiev";
+        String result = instance.preparation(args);
         assertEquals(expResult, result);
     }
+
 }

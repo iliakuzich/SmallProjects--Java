@@ -11,14 +11,3 @@ city depending on the current time of day and time zone in which the city is loc
 текущего времени суток и часового пояса, в котором находится город. 
 Например, Europe/Kiev или Asia/Tbilisi.
 
-
-# WeatherJava
-Collecting data about the weather from the site and demonstrating it in the console
-
-# SpaceShooter
-Mini game 
-
-
-A simple network chat that consists of 2 modules:
-- client;
-- server;

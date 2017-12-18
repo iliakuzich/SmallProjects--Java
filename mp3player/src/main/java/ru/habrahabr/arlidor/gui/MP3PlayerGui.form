@@ -2,6 +2,68 @@
 
 <Form version="1.3" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
+    <Component class="javax.swing.JFileChooser" name="fileChooser">
+      <Properties>
+        <Property name="acceptAllFileFilterUsed" type="boolean" value="false"/>
+        <Property name="dialogTitle" type="java.lang.String" value="&#x412;&#x44b;&#x431;&#x440;&#x430;&#x442;&#x44c; &#x444;&#x430;&#x439;&#x43b;"/>
+        <Property name="multiSelectionEnabled" type="boolean" value="true"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPopupMenu" name="popupPlaylist">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="popmenuAddSong">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/plus_16.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x43f;&#x435;&#x441;&#x43d;&#x44e;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="popmenuAddSongActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="popmenuDeleteSong">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/remove_icon.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x423;&#x434;&#x430;&#x43b;&#x438;&#x442;&#x44c; &#x43f;&#x435;&#x441;&#x43d;&#x44e;"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="popmenuDeleteSongActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <Component class="javax.swing.JPopupMenu$Separator" name="jSeparator1">
+        </Component>
+        <MenuItem class="javax.swing.JMenuItem" name="popmenuOpenPlaylist">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/open-icon.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x43a;&#x440;&#x44b;&#x442;&#x44c; &#x43f;&#x43b;&#x435;&#x439;&#x43b;&#x438;&#x441;&#x442;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="popmenuOpenPlaylistActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="popmenuClearPlaylist">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/images/clear.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x41e;&#x447;&#x438;&#x441;&#x442;&#x438;&#x442;&#x44c; &#x43f;&#x43b;&#x435;&#x439;&#x43b;&#x438;&#x441;&#x442;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="popmenuClearPlaylistActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="menuFile">
@@ -17,6 +79,9 @@
                 <Property name="text" type="java.lang.String" value="&#x41e;&#x442;&#x43a;&#x440;&#x44b;&#x442;&#x44c; &#x43f;&#x43b;&#x435;&#x439;&#x43b;&#x438;&#x441;&#x442;"/>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuOpenPlaylistActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="menuSavePlaylist">
               <Properties>
@@ -25,6 +90,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x421;&#x43e;&#x445;&#x440;&#x430;&#x43d;&#x438;&#x442;&#x44c; &#x43f;&#x43b;&#x435;&#x439;&#x43b;&#x438;&#x441;&#x442;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuSavePlaylistActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JPopupMenu$Separator" name="menuSeparator">
             </MenuItem>
@@ -35,6 +103,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x445;&#x43e;&#x434;"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="menuExitActionPerformed"/>
+              </Events>
             </MenuItem>
           </SubComponents>
         </Menu>
@@ -147,9 +218,9 @@
                           <EmptySpace pref="40" max="32767" attributes="0"/>
                           <Component id="jSeparator2" min="-2" pref="13" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                          <Component id="btnSelectPrev" min="-2" pref="45" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="btnSelectNext" min="-2" pref="45" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="btnSelectPrev" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -180,9 +251,9 @@
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnSelectPrev" max="32767" attributes="0"/>
+                          <Component id="btnSelectNext" max="32767" attributes="0"/>
                           <Component id="jSeparator2" max="32767" attributes="0"/>
-                          <Component id="btnSelectNext" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnSelectPrev" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <Component id="btnAddSong" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="btnDeleteSong" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -217,6 +288,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x43d;&#x43e;&#x432;&#x438;&#x442;&#x44c;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnStopSongActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnPauseSong">
           <Properties>
@@ -225,6 +299,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x430;&#x443;&#x437;&#x430;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPauseSongActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnPlaySong">
           <Properties>
@@ -234,6 +311,9 @@
             <Property name="toolTipText" type="java.lang.String" value="&#x412;&#x43e;&#x441;&#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x435;&#x441;&#x442;&#x438;"/>
             <Property name="name" type="java.lang.String" value="btnPlay" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPlaySongActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnNextSong">
           <Properties>
@@ -242,6 +322,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43b;&#x435;&#x434;&#x443;&#x44e;&#x449;&#x430;&#x44f; &#x43f;&#x435;&#x441;&#x43d;&#x44f;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNextSongActionPerformed"/>
+          </Events>
         </Component>
         <Container class="javax.swing.JScrollPane" name="jScrollPane2">
           <AuxValues>
@@ -252,22 +335,13 @@
           <SubComponents>
             <Component class="javax.swing.JList" name="lstPlayList">
               <Properties>
-                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="11">
-                    <StringItem index="0" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 1"/>
-                    <StringItem index="1" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 2"/>
-                    <StringItem index="2" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 3"/>
-                    <StringItem index="3" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 4"/>
-                    <StringItem index="4" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 5"/>
-                    <StringItem index="5" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 1"/>
-                    <StringItem index="6" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 2"/>
-                    <StringItem index="7" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 3"/>
-                    <StringItem index="8" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 4"/>
-                    <StringItem index="9" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 5"/>
-                    <StringItem index="10" value="&#x41f;&#x435;&#x441;&#x43d;&#x44f; 1"/>
-                  </StringArray>
+                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="mp3ListModel" type="code"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43f;&#x435;&#x441;&#x435;&#x43d;"/>
+                <Property name="componentPopupMenu" type="javax.swing.JPopupMenu" editor="org.netbeans.modules.form.ComponentChooserEditor">
+                  <ComponentRef name="popupPlaylist"/>
+                </Property>
               </Properties>
             </Component>
           </SubComponents>
@@ -277,6 +351,9 @@
             <Property name="maximum" type="int" value="6"/>
             <Property name="toolTipText" type="java.lang.String" value="&#x418;&#x437;&#x43c;&#x435;&#x43d;&#x438;&#x442;&#x44c; &#x433;&#x440;&#x43e;&#x43c;&#x43a;&#x43e;&#x441;&#x442;&#x44c;"/>
           </Properties>
+          <Events>
+            <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="slideVolumeStateChanged"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="tglbtnVolume">
           <Properties>
@@ -296,6 +373,9 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x435;&#x434;&#x44b;&#x434;&#x443;&#x449;&#x430;&#x44f; &#x43f;&#x435;&#x441;&#x43d;&#x44f;"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrevSongActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnAddSong">
           <Properties>
@@ -307,6 +387,9 @@
             <Property name="horizontalTextPosition" type="int" value="2"/>
             <Property name="name" type="java.lang.String" value="btnAddSong" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddSongActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnDeleteSong">
           <Properties>
@@ -318,8 +401,11 @@
             <Property name="horizontalTextPosition" type="int" value="2"/>
             <Property name="name" type="java.lang.String" value="btnAddSong" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteSongActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSelectPrev">
+        <Component class="javax.swing.JButton" name="btnSelectNext">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/arrow-down-icon.png"/>
@@ -329,13 +415,16 @@
             <Property name="horizontalTextPosition" type="int" value="2"/>
             <Property name="name" type="java.lang.String" value="btnAddSong" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectNextActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JSeparator" name="jSeparator2">
           <Properties>
             <Property name="orientation" type="int" value="1"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnSelectNext">
+        <Component class="javax.swing.JButton" name="btnSelectPrev">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/images/arrow-up-icon.png"/>
@@ -346,6 +435,9 @@
             <Property name="name" type="java.lang.String" value="btnAddSong" noResource="true"/>
             <Property name="verticalTextPosition" type="int" value="1"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSelectPrevActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -394,6 +486,9 @@
             <Property name="actionCommand" type="java.lang.String" value="search"/>
             <Property name="name" type="java.lang.String" value="btnSearch" noResource="true"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSearchActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtSearch">
           <Properties>
@@ -405,6 +500,10 @@
             </Property>
             <Property name="text" type="java.lang.String" value="&#x432;&#x432;&#x435;&#x434;&#x438;&#x442;&#x435; &#x438;&#x43c;&#x44f; &#x43f;&#x435;&#x441;&#x43d;&#x438;"/>
           </Properties>
+          <Events>
+            <EventHandler event="focusGained" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtSearchFocusGained"/>
+            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txtSearchFocusLost"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -11,3 +11,10 @@ city depending on the current time of day and time zone in which the city is loc
 текущего времени суток и часового пояса, в котором находится город. 
 Например, Europe/Kiev или Asia/Tbilisi.
 
+# SimpleMP3Player
+
+A simple mp3 player implemented on a swing graphics library and using several external libraries for processing mp3 files
+
+JavaSE + Swing + Ant
+
+Простой mp3 плеер реализованный на графической библиотеке swing и использующий несколько внешних библиотек для обработки mp3 файлов

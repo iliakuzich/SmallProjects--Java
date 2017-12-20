@@ -24,7 +24,7 @@ A simple mp3 player implemented on a swing graphics library and using several ex
 
 JavaSE + Swing + Ant
 
-#SimpleBeatBox
+# SimpleBeatBox
 
 A simple BeatBox application using the Swing graphics library and JavaSound API library
 

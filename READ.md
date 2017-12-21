@@ -34,6 +34,9 @@ JavaSE + Swing + Maven
 
 # SimpleServerChat
 
+A simple application that implements the logic of the server chat on several clients. The client application is implemented using the Swing library
+The server is started using the console. All outgoing messages are also displayed in the console.
+
 Простое приложение реализующее логику серверного чата на несколько клиентов. Клиентское приложение реализуется с помощью библиотеки Swing
 Сервер запускается с помощью консоли. Все исходящие сообщения отображаются также в консоли. 
 

@@ -31,3 +31,10 @@ A simple BeatBox application using the Swing graphics library and JavaSound API 
 Простое приложение БитБокс использующее графическую библиотеку Swing и библиотеку JavaSound API
 
 JavaSE + Swing + Maven
+
+# SimpleServerChat
+
+Простое приложение реализующее логику серверного чата на несколько клиентов. Клиентское приложение реализуется с помощью библиотеки Swing
+Сервер запускается с помощью консоли. Все исходящие сообщения отображаются также в консоли. 
+
+Java  + Swing + Maven 

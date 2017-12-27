@@ -5,7 +5,7 @@
     <groupId>SimpleServer</groupId>
     <artifactId>SimpleServer</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+
 
     <name>SimpleServer</name>
     <url>http://maven.apache.org</url>
@@ -23,6 +23,11 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>ru.habrahabr.arlidor</groupId>
+            <artifactId>ChatNetwork</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -34,7 +39,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>ru.habrahabr.arlidor.SimpleChatServer</mainClass>
+                            <mainClass>ru.habrahabr.arlidor.ChatServer</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

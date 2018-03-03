@@ -15,3 +15,9 @@ Both parameters are entered in English. For example: Europe / Kiev or Tbilisi.
 
 # Weather
 Not end
+
+# ReflectionAnalyzer
+
+The program displays all information about the entered class: the signatures of all methods, constructors, together with the field names of all fields of the class.
+
+Программа отображает все сведения о введенном классе: сигнатуры всех методов, конструкторов вместе с именами полей всех полей класса.
